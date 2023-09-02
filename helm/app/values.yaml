@@ -1,0 +1,16 @@
+replicaCount: 1
+
+image:
+  registry: localhost:5000
+  repository: app
+
+nameOverride: ""
+fullnameOverride: ""
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
