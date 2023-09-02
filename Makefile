@@ -33,7 +33,7 @@ docker-push: ## Push docker image to local registry
 	docker push ${DOCKER_REGISTRY}/${APP_DOCKER_REPOSITORY}:${APP_DOCKER_TAG}
 
 docker-run: ## Run app docker image at port 8080
-	docker run -it --rm -p 8080:8080 ${DOCKER_REGISTRY}/${APP_DOCKER_REPOSITORY}:latest
+	docker run -it --rm -p 8080:8080 --name app ${DOCKER_REGISTRY}/${APP_DOCKER_REPOSITORY}:latest
 
 helm-package: ## Package app Helm chart
 	rm -rf .build && \

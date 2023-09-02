@@ -13,6 +13,7 @@ This setup was tested in Windows Pro 11 which had
 * Docker Desktop v4.22.1 running Kubernetes v1.27.1
 * Visual Studio Code 1.81.1 installed in Windows Pro 11
 * nginx ingress controller v1.8.1 installed via Helm into the Docker Desktop Kubernetes
+* Local Docker registry running at port 5000
 
 ## Setup
 
