@@ -1,5 +1,5 @@
 # docker-desktop-kubernetes
-This repository contains an example of a local Kubernetes development setup in which the development is excuted inside devcontainer (on top of Alpine linux) in (Visual Studio Code), and the application is deployed via Helm into local Kubernetes cluster (Docker Desktop).
+This repository contains an example of a local Kubernetes development setup in which the development is excuted inside devcontainer (on top of Alpine linux) in Visual Studio Code, and the application is deployed via Helm into local Kubernetes cluster (Docker Desktop).
 
 The application is accessed through an ingress which is deployed into the cluster with `nginx` ingress controller.
 
