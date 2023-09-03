@@ -1,10 +1,11 @@
-ARG     ALPINE_LINUX_VERSION
-FROM    alpine:${ALPINE_LINUX_VERSION}
+ARG     PYTHON_TAG
+FROM    python:${PYTHON_TAG}
 
 ARG     DOCKER_GROUP_ID
 ARG     USER="dev"
 ARG     KUBECTL_VERSION="v1.27.1"
 ARG     HELM_VERSION="v3.12.3"
+ARG     FLASK_VERSION="2.3.3"
 
 RUN     apk add curl doas docker gcc git make openssh shadow vim && \
         adduser -D ${USER} && \
@@ -16,4 +17,5 @@ RUN     apk add curl doas docker gcc git make openssh shadow vim && \
         mv kubectl /usr/local/bin/kubectl && \
         curl -LO https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz && \
         tar -zxvf helm-${HELM_VERSION}-linux-amd64.tar.gz && \
-        mv linux-amd64/helm /usr/local/bin/helm
+        mv linux-amd64/helm /usr/local/bin/helm && \
+        pip install Flask==${FLASK_VERSION}

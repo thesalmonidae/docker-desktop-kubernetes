@@ -4,7 +4,7 @@
         "dockerfile": "Dockerfile",
         "context": "..",
         "args": {
-            "ALPINE_LINUX_VERSION": "3.18.3",
+            "PYTHON_TAG": "3.11.5-alpine",
             "DOCKER_GROUP_ID": "1001"
         }
     },
@@ -16,5 +16,12 @@
     ],
     "runArgs": [
         "--add-host=kubernetes.docker.internal:host-gateway"
-    ]
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python"
+            ]
+        }
+    }
 }
