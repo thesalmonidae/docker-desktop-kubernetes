@@ -26,6 +26,22 @@ This setup was tested in Windows Pro 11 which had
 * nginx ingress controller v1.8.1 installed via Helm into the Docker Desktop Kubernetes
 * Local Docker registry running at port 5000
 
+### Install nginx ingress controller
+
+Install nginx ingress controller.
+
+```
+helm install my-release oci://ghcr.io/nginxinc/charts/nginx-ingress --version 1.0.1
+```
+
+### Install local Docker registry
+
+Install local Docker registry.
+
+```
+docker run -d -p 5000:5000 --restart=always --name registry registry:2
+```
+
 ## Setup
 
 Follow these instructions carefully.
